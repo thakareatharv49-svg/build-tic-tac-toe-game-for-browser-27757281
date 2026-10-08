@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0; min-height: 100vh; display: grid; place-items: center;
+  font-family: system-ui, sans-serif; background: #0b1020; color: #fff;
+}
+.game { text-align: center; padding: 24px; }
+h1 { margin-bottom: 8px; }
+#status { color: #aab5d6; margin-bottom: 20px; }
+.board {
+  display: grid; grid-template-columns: repeat(3, 90px); gap: 8px;
+  margin: 0 auto 20px;
+}
+.cell {
+  width: 90px; height: 90px; border: 1px solid #33405f; border-radius: 12px;
+  background: #141c31; color: #fff; font-size: 32px; cursor: pointer;
+}
+.cell:hover { background: #1d2945; }
+button#restart {
+  border: 0; border-radius: 10px; padding: 10px 18px;
+  background: #6c63ff; color: white; cursor: pointer;
+}
+@media (max-width: 420px) {
+  .board { grid-template-columns: repeat(3, 25vw); }
+  .cell { width: 25vw; height: 25vw; }
+}
